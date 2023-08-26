@@ -4,13 +4,21 @@ import foodImage from './images/food__2_-removebg-preview.png';
 // import natureImage from './images/img_nature_wide.jpg';
 // import snowImage from './images/img_snow_wide.jpg';
 // import mountainsImage from './images/img_mountains_wide.jpg';
-import spicyImage from './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg';
-import fastFoodImage from './images/daily-slowdown-7-TOCB28rms-unsplash.jpg';
-import sweetImage from './images/leighann-blackwood-HCGCpFxQlrA-unsplash.jpg';
+// import spicyImage from './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg';
+// import fastFoodImage from './images/daily-slowdown-7-TOCB28rms-unsplash.jpg';
+// import sweetImage from './images/leighann-blackwood-HCGCpFxQlrA-unsplash.jpg';
 import Signup from './Signup'
 import ogsignupusername from './ogsignupusername'
+import Food from './Food';
+
+ 
+
 
 const App = () => {
+  const products = [
+    { id: 1, spicyImage: './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg' },
+    { id: 2, spicyImage: './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg' },
+];
   const [slideIndex, setSlideIndex] = useState(1);
 
   const plusSlides = (n) => {
@@ -32,7 +40,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <>
       <div id="nav">
         <img id="toumonghumacitybja" src={foodImage} alt="" />
         <div id="orcitybjakybol">
@@ -89,33 +97,15 @@ const App = () => {
       </div>
 
       <div id="foods-catogary" style={{ position: 'relative', top: '25px'}}>
-        <div id="spicy">
-          <a href="">
-            <div className="food"> <img className="img" src={spicyImage} alt="Spicy Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1></div>
-          </a>
-          <a href="">
-            <div className="food"> <img className="img" src={spicyImage} alt="Spicy Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1> </div >
-          </a>
-          <a href="">
-            <div className="food"> <img className="img" src={spicyImage} alt="Spicy Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1></div>
-          </a>
-        </div>
-
-        <div id="fastfood">
-          <div className="food"> <img className="img" src={fastFoodImage} alt="Fast Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1></div>
-          <div className="food"> <img className="img" src={fastFoodImage} alt="Fast Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1> </div >
-          <div className="food"> <img className="img" src={fastFoodImage} alt="Fast Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1></div>
-        </div>
-
-        <div id="sweet">
-          <div className="food"> <img className="img" src={sweetImage} alt="Sweet Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1></div>
-          <div className="food"> <img className="img" src={sweetImage} alt="Sweet Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1></div>
-          <div className="food"> <img className="img" src={sweetImage} alt="Sweet Food" /> <div className="line"></div> <p>6.5 star</p> <br /> <h1>Rs: 199</h1></div>
+      <div className="app-container">
+            {products.map((product) => (
+                <Food key={product.id} spicyImage={product.spicyImage} />
+            ))}
         </div>
       </div>
 
       <div id="footer"></div>
-    </div>
+    </>
   );
 };
         
