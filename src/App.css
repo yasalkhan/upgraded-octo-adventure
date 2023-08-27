@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(29, 27, 27);
+  position: relative;
+  left: 10px;
 }
 
 * {box-sizing: border-box}
@@ -233,33 +235,34 @@ top: -9px !important;
 
 
 .food {
+  margin-top: 120px;
 border-radius: 25px !important;
 width: 235px !important;
 height: 367px !important;
 background-color: rgb(37, 35, 35) !important;
 position: relative !important;
-/* left: 10px !important; */
+margin-left: 20px !important; 
 display: flex !important;
-flex-direction: column !important ;
+flex-direction: column!important ;
 flex-wrap: nowrap !important;
 justify-content: center !important;
 align-items: center !important;
 color: white !important;
 box-shadow: 7px 9px 10px black !important;
 top: 65px;
-
 }
 
 
 
 #spicy {
 display: flex !important;
-top: 20px !important ;
+top: -78px !important ;
 position: relative !important;
-flex-wrap: wrap !important;
+flex-wrap: nowrap !important;
 align-content: space-around !important;
 align-items: center !important;
 justify-content: space-evenly !important;
+
 }
 
 #fastfood {
@@ -429,6 +432,10 @@ width: 25px !important;
 display: inline-block;
 }
 
+#foods-catogary {
+  position: relative;
+  left: 25px;
+}
 
 #footer {
 height: 130px;

@@ -15,10 +15,7 @@ import Food from './Food';
 
 
 const App = () => {
-  const products = [
-    { id: 1, spicyImage: './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg' },
-    { id: 2, spicyImage: './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg' },
-];
+ 
   const [slideIndex, setSlideIndex] = useState(1);
 
   const plusSlides = (n) => {
@@ -97,12 +94,12 @@ const App = () => {
       </div>
 
       <div id="foods-catogary" style={{ position: 'relative', top: '25px'}}>
-      <div className="app-container">
-            {products.map((product) => (
-                <Food key={product.id} spicyImage={product.spicyImage} />
+      
+            
+                <Food/>
             ))}
         </div>
-      </div>
+    
 
       <div id="footer"></div>
     </>

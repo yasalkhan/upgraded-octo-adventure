@@ -1,40 +1,68 @@
 import React, { useState } from 'react';
-import './cart.css';
+ import './cart.css';
 import spicyImage from './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg';
 
-function Food(props) {
+import { FaShoppingCart } from 'react-icons/fa';
+
+function FoodItem({ name, price, addToCart }) {
+    return (
+       
+     <div className="food" >
+            <img className="img" src={spicyImage} alt="Spicy Food" />
+            <div className="line"></div>
+            <p id='rating'>{price}</p>
+            <br />
+            <h1 id='pricetag'>{name}</h1>
+            <button onClick={() => addToCart(name, price)}>Add to Cart</button>
+            </div>    
+       
+    );
+}
+
+function Cart({ cartItems }) {
+    return (
+        <div className="cart">
+            <h2>Your Cart</h2>
+            <ul>
+                {cartItems.map((item, index) => (
+                    <p key={index}>{item.name} - {item.price}</p>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+function Food() {
     const [cartItems, setCartItems] = useState([]);
 
-    const addToCart = () => {
-        const productName = document.getElementById("rating").textContent;
-        const productPrice = document.getElementById("pricetag").textContent;
-        const cartItem = `${productName} - ${productPrice}`;
-
-        setCartItems([...cartItems, cartItem]);
+    const addToCart = (name, price) => {
+        const newItem = { name, price };
+        setCartItems([...cartItems, newItem]);
     };
 
-    return (
-        <div className="food-card">
-            <div className="food">
-                <img className="img" src={spicyImage} alt="Spicy Food" />
-                <div className="line"></div>
-                <p id='rating'>6.5 star</p>
-                <br />
-                <h1 id='pricetag'>Rs: 199</h1>
-                <button className="add-to-cart" onClick={addToCart}>
-                    Add to Cart
-                </button>
-            </div>
+    const foodItems = [
+        { name: 'Burger', price: '$5.99' },
+        { name: 'Pizza', price: '$8.99' },
+        { name: 'Pasta', price: '$7.49' },
+        
+    ];
 
-            <div className="cart-items">
-                <h2>Your Cart</h2>
-                <div>
-                    {cartItems.map((item, index) => (
-                        <li key={index}>{item}</li>
+    return (
+        
+            <div className="container">
+                <div id="spicy">
+                    {foodItems.map((item, index) => (
+                       
+                        <FoodItem
+                            key={index}
+                            name={item.name}
+                            price={item.price}
+                            addToCart={addToCart}
+                        />
                     ))}
                 </div>
+                <Cart cartItems={cartItems} />
             </div>
-        </div>
     );
 }
 
