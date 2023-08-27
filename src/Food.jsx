@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './cart.css';
  import spicyImage from './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg';
 
 function Food(props) {
@@ -14,7 +14,7 @@ function Food(props) {
     };
 
     return (
-        <button className="add-to-cart" onClick={addToCart}>   <div className="food-card">
+        <button className="add-to-cart"  onClick={addToCart}>   <div className="food-card">
             <div className="food">
                 <img className="img" src={props.spicyImage} alt="Spicy Food" />
                 <div className="line"></div>

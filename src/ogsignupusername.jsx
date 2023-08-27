@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Import your CSS file if needed
+import './signup.css'; // Import your CSS file if needed
 import logoImage from './images/food__2_-removebg-preview.png'; // Import your image
 import App from './App'; // Import your image
 
