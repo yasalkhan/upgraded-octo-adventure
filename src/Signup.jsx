@@ -11,7 +11,7 @@ const Signup = () => {
       <form action="">
         <input type="email" className="emailandpassword" placeholder="Email here" className="mainall" required /><br /><br /><br /><br />
         <input type="password" className="emailandpassword" placeholder="Password here" className="mainall" required /><br />
-        <button id="submitbtn" className="mainall" value="sign in" required><h1>Login</h1></button>
+        <button id="submitbtn" className="mainall" value="sign in" required><h1>Sign up</h1></button>
       </form>
       <a href="orignal signin with username.html" id="ululuulu">Don't have an account</a>
     </div>

@@ -1,11 +1,12 @@
 
 body{
     background-color: #343333;
-    
+    margin: 0;
+    padding: 0;
   }
   
   #signup-section{
-  
+  margin-top: 30%;
     width: 400px;
     height: 500px;
     background-color: #242323;
@@ -18,7 +19,18 @@ body{
     
   
   }
-  
+  input {
+    width: 80%;
+    height: 36px;
+    background-color: #343333;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #38ACDB;
+    position: relative;
+    left: 10%;
+    top: -50px;
+    color: white;
+  }
   .emailandpassword {
     width: 80%;
     height: 36px;
@@ -36,6 +48,10 @@ body{
   color: lightblue;
   }
   
+  h2 {
+    position: relative !important;
+    bottom: 10px !important;
+  }
   
   #submitbtn {
     background-color: #38ACDB;
@@ -70,11 +86,13 @@ body{
     align-items: center;
   }
   
+
+
   #heading {
     color: rgb(11, 186, 240);
-    position: relative;
-    left: 165px;
-    top: -7%;
+    position: relative !important;
+    left: 165px ;
+    top: -7% !important;
     font-size: 32px;
     margin-top: 45px;
   }

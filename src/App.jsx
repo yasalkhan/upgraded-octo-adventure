@@ -7,8 +7,8 @@ import foodImage from './images/food__2_-removebg-preview.png';
 // import spicyImage from './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg';
 // import fastFoodImage from './images/daily-slowdown-7-TOCB28rms-unsplash.jpg';
 // import sweetImage from './images/leighann-blackwood-HCGCpFxQlrA-unsplash.jpg';
-import Signup from './Signup'
-import ogsignupusername from './ogsignupusername'
+import Signup from './signup'
+import ogsignupusername from './Login'
 import Food from './Food';
 
  
