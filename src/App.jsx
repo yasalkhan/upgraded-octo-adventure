@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 import foodImage from './images/food__2_-removebg-preview.png'; 
-// import natureImage from './images/img_nature_wide.jpg';
-// import snowImage from './images/img_snow_wide.jpg';
-// import mountainsImage from './images/img_mountains_wide.jpg';
+ import bbq from './images/chantal-lim-3xujHCBSTKw-unsplash.jpg';
+ import pizza from './images/pablo-pacheco-D3Mag4BKqns-unsplash.jpg';
+ import burger from './images/mae-mu-I7A_pHLcQK8-unsplash.jpg';
 // import spicyImage from './images/shreyak-singh-0j4bisyPo3M-unsplash.jpg';
 // import fastFoodImage from './images/daily-slowdown-7-TOCB28rms-unsplash.jpg';
 // import sweetImage from './images/leighann-blackwood-HCGCpFxQlrA-unsplash.jpg';
@@ -70,17 +70,17 @@ const App = () => {
       <div className="slideshow-container">
         <div className="mySlides fade">
           <div className="numbertext">1 / 3</div>
-          {/* <img src={natureImage} style={{ width: '100%' }} alt="Nature" /> */}
+          <img src={bbq} style={{ width: '100%' }} alt="Nature" /> 
           <div className="text">Caption Text</div>
         </div>
         <div className="mySlides fade">
           <div className="numbertext">2 / 3</div>
-          {/* <img src={snowImage} style={{ width: '100%' }} alt="Snow" /> */}
+           <img src={pizza} style={{ width: '100%' }} alt="Snow" />
           <div className="text">Caption Two</div>
         </div>
         <div className="mySlides fade">
           <div className="numbertext">3 / 3</div>
-          {/* <img src={mountainsImage} style={{ width: '100%' }} alt="Mountains" /> */}
+           <img src={burger} style={{ width: '100%' }} alt="Mountains" /> 
           <div className="text">Caption Three</div>
         </div>
         <a className="prev" onClick={() => plusSlides(-1)}>❮</a>
